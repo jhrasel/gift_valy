@@ -17,16 +17,20 @@ export const Home = () => {
 
         <>
         
-            <Banner></Banner>
-            <Delivary></Delivary>
-            <Price></Price>
-            <Customized></Customized>
-            <Video></Video>
-            <OrderPrice></OrderPrice>
-            <Gallery></Gallery>
-            <CustomerReview></CustomerReview>
-            <Form></Form>
-            <Footer></Footer>
+            <div className="Overflow">
+
+                <Banner></Banner>
+                <Delivary></Delivary>
+                <Price></Price>
+                <Customized></Customized>
+                <Video></Video>
+                <OrderPrice></OrderPrice>
+                <Gallery></Gallery>
+                <CustomerReview></CustomerReview>
+                <Form></Form>
+                <Footer></Footer>
+
+            </div>
 
         </>
 

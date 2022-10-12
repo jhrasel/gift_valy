@@ -5,6 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ReactPlayer from "react-player";
 import "swiper/css";
 import "swiper/css/pagination";
+import Delivary from "./Delivary";
 
 
 const CustomerReview = () => {
@@ -13,6 +14,87 @@ const CustomerReview = () => {
 
         
         <>
+
+            {/* Mobil Delivary */}
+            <section id="delivary" className='MobileDelivary'>
+
+                <Container>
+                    
+                    <Row className='d_flex'>
+
+                        <Col lg={4} sm={4}>
+
+                            <div className="delivary_item">
+
+                                <div className="img">
+                                    <img src="frontend_asset/images/delivary-1.png" alt="" />
+                                </div>
+
+                                <div className="text">
+                                    <h3>সারাদেশে ডেলিভারী চার্জ ফ্রি</h3>
+                                </div>
+
+                                {/* border */}
+                                <div className="delivary_border">
+                                    <img src="frontend_asset/images/delivary_border.png" alt="" />
+                                </div>
+
+                            </div>
+
+                        </Col>
+
+                        <Col lg={4} sm={4}>
+
+                            <div className="delivary_item">
+
+                                <div className="img">
+                                    <img src="frontend_asset/images/delivary-2.png" alt="" />
+                                </div>
+
+                                <div className="text">
+                                    <h3>প্রিমিয়াম প্যাকেজিং</h3>
+                                </div>
+
+                                {/* border */}
+                                <div className="delivary_border">
+                                    <img src="frontend_asset/images/delivary_border.png" alt="" />
+                                </div>
+                                
+                            </div>
+
+                        </Col>
+
+                        <Col lg={4} sm={4}>
+
+                            <div className="delivary_item">
+
+                                <div className="img">
+                                    <img src="frontend_asset/images/delivary-3.png" alt="" />
+                                </div>
+
+                                <div className="text">
+                                    <h3>ক্যাশ অন ডেলিভারী</h3>
+                                </div>
+
+                                {/* border */}
+                                <div className="delivary_border">
+                                    <img src="frontend_asset/images/delivary_border.png" alt="" />
+                                </div>
+                                
+                            </div>
+
+                        </Col>
+
+                    </Row>
+
+                </Container>
+
+                <div className="fram">
+                    <img src="frontend_asset/images/delivary_fram.png" alt="" />
+                </div>
+
+
+            </section>
 
             <section id="customer_review">
 
@@ -41,11 +123,24 @@ const CustomerReview = () => {
                                         
                                 
                                 <Swiper
-                                    slidesPerView={3}
-                                    spaceBetween={30}
+                                    breakpoints={{
+                                        650: {
+                                          slidesPerView: 1,
+                                          spaceBetween: 0,
+                                        },
+                                        651: {
+                                          slidesPerView: 2,
+                                          spaceBetween: 30,
+                                        },
+                                        1000: {
+                                          slidesPerView: 3,
+                                          spaceBetween: 30,
+                                        },
+                                    }}
                                     pagination={{
                                     clickable: true,
                                     }}
+                                    
                                     modules={[Pagination]}
                                     className="mySwiper"
                                 >
@@ -113,25 +208,25 @@ const CustomerReview = () => {
 
                         <Row>
 
-                            <Col lg={6}>
+                            <Col lg={6} sm={6}>
                                 <div className="img">
                                     <img src="frontend_asset/images/review-1.png" alt="" />
                                 </div>
                             </Col>
 
-                            <Col lg={6}>
+                            <Col lg={6} sm={6}>
                                 <div className="img">
                                     <img src="frontend_asset/images/review-1.png" alt="" />
                                 </div>
                             </Col>
 
-                            <Col lg={6}>
+                            <Col lg={6} sm={6}>
                                 <div className="img">
                                     <img src="frontend_asset/images/review-1.png" alt="" />
                                 </div>
                             </Col>
 
-                            <Col lg={6}>
+                            <Col lg={6} sm={6}>
                                 <div className="img">
                                     <img src="frontend_asset/images/review-1.png" alt="" />
                                 </div>

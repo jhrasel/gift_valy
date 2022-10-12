@@ -59,6 +59,10 @@ body {
     padding: 0;
 }
 
+.Overflow{
+    overflow-x: hidden !important;
+}
+
 /* font-family: 'Manrope', sans-serif !important; */
 
 /* =============== COMMON CSS FOR WEB SITE =============== */
@@ -198,12 +202,19 @@ body {
     height: 60px;
 }
 
+.logo.Mobile{
+    display: none;
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------
     START delivary PART
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 #delivary{
     background: var(--bg_color);
+}
+
+.MobileDelivary{
+    display: none;
 }
 
 .delivary_item{
@@ -236,6 +247,10 @@ body {
     width: 100%;
 }
 
+.product_part ul {
+    margin: 0;
+    padding: 0;
+}
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -250,12 +265,13 @@ body {
     width: 100%;
 }
 
-.price_img .overlay_text{
+.price_img .overlay_text {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 100%;
 }
 
 .price_img .overlay_text a.bg{
@@ -436,6 +452,10 @@ body {
 .customer_review_content span.swiper-pagination-bullet {
     width: 15px;
     height: 15px;
+}
+
+.customer_review_content .swiper {
+    padding-bottom: 50px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------

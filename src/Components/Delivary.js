@@ -7,14 +7,15 @@ const Delivary = () => {
 
         
         <>
-        
-            <section id="delivary">
+
+            {/* Desktop Delivary */}
+            <section id="delivary" className='DesktopDelivary'>
 
                 <Container>
                     
                     <Row className='d_flex'>
 
-                        <Col lg={4}>
+                        <Col lg={4} sm={4}>
 
                             <div className="delivary_item">
 
@@ -35,7 +36,7 @@ const Delivary = () => {
 
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} sm={4}>
 
                             <div className="delivary_item">
 
@@ -56,7 +57,7 @@ const Delivary = () => {
 
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} sm={4}>
 
                             <div className="delivary_item">
 

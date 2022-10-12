@@ -33,7 +33,7 @@ const Gallery = () => {
                         <Row>
 
                             {/* Item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={4}>
 
                                 <div className="gallery_item">
 
@@ -47,7 +47,7 @@ const Gallery = () => {
                             </Col>
 
                             {/* Item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={4}>
 
                                 <div className="gallery_item">
 
@@ -61,7 +61,7 @@ const Gallery = () => {
                             </Col>
 
                             {/* Item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={4}>
 
                                 <div className="gallery_item">
 
@@ -75,7 +75,7 @@ const Gallery = () => {
                             </Col>
 
                             {/* Item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={4}>
 
                                 <div className="gallery_item">
 
@@ -89,7 +89,7 @@ const Gallery = () => {
                             </Col>
 
                             {/* Item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={4}>
 
                                 <div className="gallery_item">
 
@@ -103,7 +103,7 @@ const Gallery = () => {
                             </Col>
 
                             {/* Item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={4}>
 
                                 <div className="gallery_item">
 

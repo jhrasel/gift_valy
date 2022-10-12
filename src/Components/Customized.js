@@ -29,7 +29,7 @@ const Customized = () => {
                         <Row>
 
                             {/* item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={6}>
                                 
                                 <div className="customized_item">
 
@@ -53,7 +53,7 @@ const Customized = () => {
                             </Col>
 
                             {/* item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={6}>
                                 
                                 <div className="customized_item">
 
@@ -77,7 +77,7 @@ const Customized = () => {
                             </Col>
 
                             {/* item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={6}>
                                 
                                 <div className="customized_item">
 
@@ -101,7 +101,7 @@ const Customized = () => {
                             </Col>
 
                             {/* item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={6}>
                                 
                                 <div className="customized_item">
 
@@ -125,7 +125,7 @@ const Customized = () => {
                             </Col>
 
                             {/* item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={6}>
                                 
                                 <div className="customized_item">
 
@@ -149,7 +149,7 @@ const Customized = () => {
                             </Col>
 
                             {/* item */}
-                            <Col lg={4}>
+                            <Col lg={4} sm={6}>
                                 
                                 <div className="customized_item">
 

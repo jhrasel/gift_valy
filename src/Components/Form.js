@@ -30,7 +30,7 @@ const Form = () => {
 
                             <Row>
 
-                                <Col lg={6}>
+                                <Col lg={6} sm={6}>
                                     
                                     <div className="left_part">
 
@@ -58,7 +58,7 @@ const Form = () => {
 
                                             <h4>Paymet</h4>
                                             <div className="custome_input checkbox d_flex">
-                                                <input type="checkbox" id="delivary_input" placeholder />
+                                                <input type="checkbox" id="delivary_input" checked placeholder />
                                                 <label htmlFor="delivary_input"> ক্যাশ অন ডেলিভারি </label>
                                             </div>
                                             
@@ -72,7 +72,7 @@ const Form = () => {
 
                                 </Col>
 
-                                <Col lg={6}>
+                                <Col lg={6} sm={6}>
 
                                     <div className="right_part">
 
@@ -101,29 +101,16 @@ const Form = () => {
                                                 </div>
                                                 {/* amount */}
                                                 <div className="amount">
-                                                    <h3> Tk 1,690.00</h3>
+                                                    <h3> Tk 1,999.00</h3>
                                                 </div>
                                                 </li>
                                                 <li className="d_flex d_justify">
-                                                <h5>Subtotal</h5>
-                                                <h5>1,690.00</h5>
-                                                </li>
-                                                <li className="d_flex d_justify">
-                                                <h5>Shipping</h5>
-                                                <div className="outside">
-                                                    <div className="item d_flex">
-                                                    <input type="checkbox" id="Dhaka" />
-                                                    <label htmlFor="Dhaka">ঢাকার মধ্যে</label>
-                                                    </div>
-                                                    <div className="item d_flex">
-                                                    <input type="checkbox" id="out_Dhaka" />
-                                                    <label htmlFor="out_Dhaka">ঢাকার বাহিরে</label>
-                                                    </div>
-                                                </div>
+                                                    <h5>Subtotal</h5>
+                                                    <h5>1,999.00</h5>
                                                 </li>
                                                 <li className="d_flex d_justify">
                                                 <h3>Total</h3>
-                                                <h3>1,690.00</h3>
+                                                    <h3>1,999.00</h3>
                                                 </li>
                                             </ul>
 

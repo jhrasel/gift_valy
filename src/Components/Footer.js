@@ -27,7 +27,7 @@ const Footer = () => {
                     
                     <Row>
 
-                        <Col lg={4}>
+                        <Col lg={4} sm={4}>
                             
                             <div className="FooterContent">
                                 
@@ -53,7 +53,7 @@ const Footer = () => {
 
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} sm={4}>
                             
                             <div className="FooterContent">
                                 
@@ -71,7 +71,7 @@ const Footer = () => {
 
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} sm={4}>
                             
                             <div className="FooterContent">
                                 

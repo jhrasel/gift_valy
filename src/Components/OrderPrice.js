@@ -15,7 +15,7 @@ const OrderPrice = () => {
                     
                     <Row className='justify-content-md-center'>
 
-                        <Col lg={9}>
+                        <Col lg={9} sm={12}>
                             
                             <div className="price_img">
 
