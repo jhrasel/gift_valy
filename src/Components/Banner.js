@@ -1,9 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { baseUrl } from '../Url';
 
 
 const Banner = () => {
+
+    let [headerData, setHeaderData] = useState([]);
+
+    useEffect(()=> {
+
+        axios.get(baseUrl+'/general-data').then(({data})=>{
+
+            setHeaderData(data.data);
+           
+        })
+
+    },[])
 
     return (
 
@@ -28,9 +42,9 @@ const Banner = () => {
                                 {/* <!-- text --> */}
                                 <div className='text'>
 
-                                    <h3>ভালোবাসার উপহারটি  মূল্যবান হয়। প্রিয়জনের রাগ  ভাঙাতে ফুল ,Coustomize Chocklet Gift Box, কার্ড  মুহূর্তের মধ্যে প্রিয়জনের মুখে হাসি ফোটাবে।</h3>
+                                    <h3>{headerData.header_text}</h3>
 
-                                    {/* <a href="" className='bg'>অর্ডার করতে ক্লিক করুন</a>
+                                    {/* <a href="#" className='bg'>অর্ডার করতে ক্লিক করুন</a>
                                     <h4>018100-45255</h4>
                                     <h5>অর্ডার পেতে কল করুন এই নাম্বারে</h5> */}
 
@@ -52,7 +66,7 @@ const Banner = () => {
                             </div>
 
                             <div className='banner_img'>
-                                <img src="frontend_asset/images/banner_img.png" alt="" />
+                                <img src={headerData.header_image} alt="" />
                             </div>
 
                         </Col>

@@ -1,0 +1,1 @@
+export const baseUrl='https://giftvaly.sitcdev.xyz/api/v1/web';

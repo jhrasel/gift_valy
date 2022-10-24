@@ -42,10 +42,10 @@ const Footer = () => {
                                 {/* Social Icon */}
                                 <div className="SocialIcon">
 
-                                    <a href="" className='fb'> <FaFacebookF/> </a>
-                                    <a href="" className='youtube'> <AiFillYoutube/> </a>
-                                    <a href="" className='instagram'> <AiOutlineInstagram/> </a>
-                                    <a href="" className='twitter'> <BsTwitter/> </a>
+                                    <a href="#" className='fb'> <FaFacebookF/> </a>
+                                    <a href="#" className='youtube'> <AiFillYoutube/> </a>
+                                    <a href="#" className='instagram'> <AiOutlineInstagram/> </a>
+                                    <a href="#" className='twitter'> <BsTwitter/> </a>
                                     
                                 </div>
 
@@ -61,9 +61,9 @@ const Footer = () => {
 
                                 <ul>
 
-                                    <li className='d_flex'><a href="">Privacy Policy</a> </li>
-                                    <li className='d_flex'><a href="">Terms & Conditions</a> </li>
-                                    <li className='d_flex'><a href="">Contact</a> </li>
+                                    <li className='d_flex'><a href="#">Privacy Policy</a> </li>
+                                    <li className='d_flex'><a href="#">Terms & Conditions</a> </li>
+                                    <li className='d_flex'><a href="#">Contact</a> </li>
 
                                 </ul>
 

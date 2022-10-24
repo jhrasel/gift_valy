@@ -1,8 +1,23 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { baseUrl } from '../Url';
 
 
 const Gallery = () => {
+
+    let [gallery, setGallery] = useState([]);
+    console.log(gallery);
+
+    useEffect(()=> {
+
+        axios.get(baseUrl+'/gallery').then(({data})=>{
+
+            setGallery(data.data);
+            
+        })
+
+    },[])
 
     return (
 
@@ -32,89 +47,24 @@ const Gallery = () => {
                     
                         <Row>
 
-                            {/* Item */}
-                            <Col lg={4} sm={4}>
+                            {
+                                gallery.map((item)=>(
 
-                                <div className="gallery_item">
+                                    <Col lg={4} sm={4}>
 
-                                    {/* img */}
-                                    <div className="gal_img">
-                                        <img src="frontend_asset/images/gal-1.png" alt="" />
-                                    </div>
+                                        <div className="gallery_item">
 
-                                </div>
+                                            {/* img */}
+                                            <div className="gal_img">
+                                                <img src={item.image} alt="" />
+                                            </div>
 
-                            </Col>
+                                        </div>
 
-                            {/* Item */}
-                            <Col lg={4} sm={4}>
+                                    </Col>
 
-                                <div className="gallery_item">
-
-                                    {/* img */}
-                                    <div className="gal_img">
-                                        <img src="frontend_asset/images/gal-2.png" alt="" />
-                                    </div>
-
-                                </div>
-
-                            </Col>
-
-                            {/* Item */}
-                            <Col lg={4} sm={4}>
-
-                                <div className="gallery_item">
-
-                                    {/* img */}
-                                    <div className="gal_img">
-                                        <img src="frontend_asset/images/gal-3.png" alt="" />
-                                    </div>
-
-                                </div>
-
-                            </Col>
-
-                            {/* Item */}
-                            <Col lg={4} sm={4}>
-
-                                <div className="gallery_item">
-
-                                    {/* img */}
-                                    <div className="gal_img">
-                                        <img src="frontend_asset/images/gal-4.png" alt="" />
-                                    </div>
-
-                                </div>
-
-                            </Col>
-
-                            {/* Item */}
-                            <Col lg={4} sm={4}>
-
-                                <div className="gallery_item">
-
-                                    {/* img */}
-                                    <div className="gal_img">
-                                        <img src="frontend_asset/images/gal-1.png" alt="" />
-                                    </div>
-
-                                </div>
-
-                            </Col>
-
-                            {/* Item */}
-                            <Col lg={4} sm={4}>
-
-                                <div className="gallery_item">
-
-                                    {/* img */}
-                                    <div className="gal_img">
-                                        <img src="frontend_asset/images/gal-2.png" alt="" />
-                                    </div>
-
-                                </div>
-
-                            </Col>
+                                ))
+                            }
 
                         </Row>
 

@@ -1,8 +1,23 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ReactPlayer from "react-player";
+import { baseUrl } from "../Url";
 
 const Video = () => {
+
+  let [videoLink, setVideoLink] = useState([]);
+
+    useEffect(()=> {
+
+        axios.get(baseUrl+'/general-data').then(({data})=>{
+
+          setVideoLink(data.data);
+           
+        })
+
+  },[])
+
   return (
     <>
       <section id="video">
@@ -17,7 +32,7 @@ const Video = () => {
                   controls={true}
                   muted={true}
                   playing={true}
-                  url="https://www.youtube.com/watch?v=tAkmVh080SE"
+                  url={videoLink.product_video_link}
                 />
               </div>
             </Col>

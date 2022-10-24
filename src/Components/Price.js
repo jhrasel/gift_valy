@@ -22,7 +22,7 @@ const Price = () => {
                                 <div className="overlay_text">
                                 <h2>আপনার এবং আপনার <br /> প্রিয়জনদের জন্য সেরা উপহার</h2>
                                 <h1>মুল্য-১২০০ টাকা</h1>
-                                <a href className="bg">অর্ডার করুন</a>
+                                <a href="#" className="bg">অর্ডার করুন</a>
                                 </div>
                             </div>
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import { Col, Container, Row } from 'react-bootstrap';
@@ -6,9 +6,24 @@ import ReactPlayer from "react-player";
 import "swiper/css";
 import "swiper/css/pagination";
 import Delivary from "./Delivary";
+import axios from "axios";
+import { baseUrl } from "../Url";
+
 
 
 const CustomerReview = () => {
+
+    let [videoLink, setVideoLink] = useState([])
+
+    useEffect(()=> {
+
+        axios.get(baseUrl+'/customer-review-link').then(({data})=>{
+
+            setVideoLink(data.data);
+           
+        })
+
+    },[])
 
     return (
 
@@ -16,7 +31,8 @@ const CustomerReview = () => {
         <>
 
             {/* Mobil Delivary */}
-            <section id="delivary" className='MobileDelivary'>
+            
+<section id="delivary" className='MobileDelivary'>
 
                 <Container>
                     
@@ -144,56 +160,21 @@ const CustomerReview = () => {
                                     modules={[Pagination]}
                                     className="mySwiper"
                                 >
+                                    {
+                                        videoLink.map((item, key)=>(
 
-                                    <SwiperSlide>
-                                        <div className="Video">
-                                            <ReactPlayer
-                                            controls={true}
-                                            muted={true}
-                                            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                                            />
-                                        </div>
-                                    </SwiperSlide>
+                                            <SwiperSlide id="key">
+                                                <div className="Video">
+                                                    <ReactPlayer
+                                                    controls={true}
+                                                    muted={true}
+                                                    url={item.customer_review_video_link}
+                                                    />
+                                                </div>
+                                            </SwiperSlide>
 
-                                    <SwiperSlide>
-                                        <div className="Video">
-                                            <ReactPlayer
-                                            controls={true}
-                                            muted={true}
-                                            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <div className="Video">
-                                            <ReactPlayer
-                                            controls={true}
-                                            muted={true}
-                                            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <div className="Video">
-                                            <ReactPlayer
-                                            controls={true}
-                                            muted={true}
-                                            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                                            />
-                                        </div>
-                                    </SwiperSlide>
-
-                                    <SwiperSlide>
-                                        <div className="Video">
-                                            <ReactPlayer
-                                            controls={true}
-                                            muted={true}
-                                            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                                            />
-                                        </div>
-                                    </SwiperSlide>
+                                        ))
+                                    }
 
                                 </Swiper>
 
