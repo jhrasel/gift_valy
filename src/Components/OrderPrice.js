@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link ,smooth ,spy } from 'react-scroll'
 
 
 const OrderPrice = () => {
@@ -22,7 +23,7 @@ const OrderPrice = () => {
                                 <img src="frontend_asset/images/order.png" alt="" />
 
                                 <div className="overlay_text">
-                                    <a href="#" className="bg">অর্ডার করতে এখানে ক্লিক করুন</a>
+                                    <Link to="form_part" activeClass="active"  className="bg">অর্ডার করতে এখানে ক্লিক করুন</Link>
                                     <h1>মুল্য-১২০০ টাকা</h1>
                                     <h2>সারা দেশে ফ্রি হোম ডেলিভারি</h2>
                                 </div>

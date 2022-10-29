@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link ,smooth ,spy } from 'react-scroll'
 
 
 const Price = () => {
@@ -22,7 +23,7 @@ const Price = () => {
                                 <div className="overlay_text">
                                 <h2>আপনার এবং আপনার <br /> প্রিয়জনদের জন্য সেরা উপহার</h2>
                                 <h1>মুল্য-১২০০ টাকা</h1>
-                                <a href="#" className="bg">অর্ডার করুন</a>
+                                <Link to="form_part" activeClass="active"    className="bg">অর্ডার করুন</Link>
                                 </div>
                             </div>
 

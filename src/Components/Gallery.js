@@ -7,7 +7,7 @@ import { baseUrl } from '../Url';
 const Gallery = () => {
 
     let [gallery, setGallery] = useState([]);
-    console.log(gallery);
+    // console.log(gallery);
 
     useEffect(()=> {
 
@@ -50,7 +50,7 @@ const Gallery = () => {
                             {
                                 gallery.map((item)=>(
 
-                                    <Col lg={4} sm={4}>
+                                    <Col lg={4} sm={4} key={item.id}>
 
                                         <div className="gallery_item">
 

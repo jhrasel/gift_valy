@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 import Swal from 'sweetalert2'
 
 const Form = () => {
   const { register, handleSubmit, reset } = useForm();
+
   const navigate = useNavigate();
   
 
@@ -15,6 +16,7 @@ const Form = () => {
     data["product_name"] = "𝐂𝐔𝐒𝐓𝐎𝐌𝐈𝐙𝐄𝐃 𝐋𝐎𝐕𝐄 𝐓𝐎𝐖𝐄𝐑 𝐆𝐈𝐅𝐓 𝐁𝐎𝐗s";
     data["quantity"] = "1";
     data["amount"] = "1999";
+    
 
     fetch("http://giftvaly.sitcdev.xyz/api/v1/order/store", {
       method: "POST", // or 'PUT'
@@ -26,12 +28,13 @@ const Form = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        navigate('/thankyou');
+       
+        navigate('/thankyou/'+data.data.id);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-    console.log(data);
+    // console.log(data);
 
     reset();
   };

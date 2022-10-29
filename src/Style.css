@@ -275,6 +275,7 @@ body {
 }
 
 .price_img .overlay_text a.bg{
+    cursor: pointer;
     margin-top: 5px;
 }
 

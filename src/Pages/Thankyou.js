@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { AiFillCaretDown, AiFillCheckCircle } from 'react-icons/ai';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { useParams } from 'react-router-dom';
+
 
 const Thankyou = () => {
+    const [order ,setOrder] =useState({})
+    const { id_Number} = useParams();
 
-    console.log('data');
+    console.log(id_Number);
+    useEffect(()=> {
+        fetch(`https://giftvaly.sitcdev.xyz/api/v1/order/${id_Number}`)
+        .then(res => res.json())
+        .then(data=> setOrder(data.data))
+    } ,[])
 
 
     return (
@@ -67,17 +76,17 @@ const Thankyou = () => {
 
                                     <li>
                                         <p>Order number:</p>
-                                        <h5>4427</h5>
+                                        <h5>{order.order_number}</h5>
                                     </li>
 
                                     <li>
                                         <p>Date:</p>
-                                        <h5>October 23, 2022</h5>
+                                        <h5>{order.order_date}</h5>
                                     </li>
 
                                     <li>
                                         <p>Total:</p>
-                                        <h5>৳ 1,999.00</h5>
+                                        <h5>৳ {order.total_amount}</h5>
                                     </li>
 
                                     <li>
@@ -115,29 +124,29 @@ const Thankyou = () => {
 
                                         <div className="OrderDetailContentItem d_flex">
 
-                                            <h6>Choclet Gift Box × 1</h6>
-                                            <h6>৳ 1,999.00</h6>
+                                            <h6>{order.product_name}  × 1</h6>
+                                            <h6>৳ {order.total_amount}</h6>
 
                                         </div>
 
                                         <div className="OrderDetailContentItem d_flex">
 
                                             <h6>Subtotal:</h6>
-                                            <h6>৳ 1,999.00</h6>
+                                            <h6>৳ {order.total_amount}</h6>
 
                                         </div>
 
                                         <div className="OrderDetailContentItem d_flex">
 
                                             <h6>Payment method:	</h6>
-                                            <h6>Total</h6>
+                                            <h6>Cash on delivery</h6>
 
                                         </div>
 
                                         <div className="OrderDetailContentItem d_flex">
 
                                             <h6>Total:</h6>
-                                            <h6>৳ 1,999.00</h6>
+                                            <h6>৳ {order.total_amount}</h6>
 
                                         </div>
 

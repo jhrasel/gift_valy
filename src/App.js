@@ -5,6 +5,7 @@ import './Media.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Thankyou from "./Pages/Thankyou";
 
+
 function App() {
 
 
@@ -19,7 +20,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Home />}></Route>
-        <Route path="/thankyou" element={<Thankyou />}></Route>
+        <Route path="/thankyou/:id_Number"  element={<Thankyou />}></Route>
 
       </Routes>
 
