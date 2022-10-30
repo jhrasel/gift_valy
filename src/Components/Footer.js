@@ -16,11 +16,11 @@ const Footer = () => {
             <section id="Footer">
 
                 <div className="footerLeft">
-                    <img src="frontend_asset/images/footer_left.png" alt="" />
+                    <img src="../frontend_asset/images/footer_left.png" alt="" />
                 </div>
 
                 <div className="footerRight">
-                    <img src="frontend_asset/images/footer_right.png" alt="" />
+                    <img src="../frontend_asset/images/footer_right.png" alt="" />
                 </div>
       
                 <Container>

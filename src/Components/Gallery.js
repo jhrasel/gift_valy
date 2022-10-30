@@ -27,7 +27,7 @@ const Gallery = () => {
             <section id="customized" className="gallery">
 
                 <div className="overlay_img">
-                    <img src="frontend_asset/images/gal_fram.png" alt="" />
+                    <img src="../frontend_asset/images/gal_fram.png" alt="" />
                 </div>
       
                 <Container>
@@ -48,9 +48,9 @@ const Gallery = () => {
                         <Row>
 
                             {
-                                gallery.map((item)=>(
+                                gallery.map((item, index)=>(
 
-                                    <Col lg={4} sm={4} key={item.id}>
+                                    <Col lg={4} sm={4} key={index}>
 
                                         <div className="gallery_item">
 

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 
-import Swal from 'sweetalert2'
 
 const Form = () => {
-  const { register, handleSubmit, reset } = useForm();
-
   const navigate = useNavigate();
+  const { register, handleSubmit,reset } = useForm();
+
+
   
 
   const onSubmit = (data) => {
@@ -18,7 +18,7 @@ const Form = () => {
     data["amount"] = "1999";
     
 
-    fetch("http://giftvaly.sitcdev.xyz/api/v1/order/store", {
+    fetch("https://giftvaly.sitcdev.xyz/api/v1/order/store", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -27,16 +27,23 @@ const Form = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
+        if(data){
+          navigate(`thankyou/${data.data.id}`);
+          console.log("Success:", data);
+
+        }
+  
        
-        navigate('/thankyou/'+data.data.id);
+        // /thankyou/${data.data.id}
       })
       .catch((error) => {
         console.error("Error:", error);
       });
     // console.log(data);
 
-    reset();
+    reset()
+
+   
   };
   return (
     <>
@@ -108,7 +115,8 @@ const Form = () => {
                         <input
                           type="checkbox"
                           id="delivary_input"
-                          checked
+                          defaultChecked={true}
+                          
                           placeholder=""
                         />
                         <label htmlFor="delivary_input">

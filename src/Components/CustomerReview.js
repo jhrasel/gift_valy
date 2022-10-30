@@ -161,9 +161,9 @@ const CustomerReview = () => {
                                     className="mySwiper"
                                 >
                                     {
-                                        videoLink.map((item, key)=>(
+                                        videoLink.map((item, index)=>(
 
-                                            <SwiperSlide id="key">
+                                            <SwiperSlide key={index} id="key">
                                                 <div className="Video">
                                                     <ReactPlayer
                                                     controls={true}
